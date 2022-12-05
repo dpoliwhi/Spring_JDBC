@@ -1,56 +1,42 @@
-INSERT INTO users (firstname,lastname,birthday,phone,email)
-VALUES
-    ('Dean','Carlson','2000-03-17','1-866-205-1481','ornare.in@yahoo.net'),
-    ('Bradley','Dillard','2016-06-18','1-668-497-4332','eu.augue@yahoo.org'),
-    ('Hilda','Kemp','2009-04-21','1-142-683-5244','ipsum.sodales@hotmail.com'),
-    ('Dai','Leon','2011-04-23','(849) 304-2475','mollis.integer.tincidunt@icloud.ca'),
-    ('Wynter','Dejesus','2020-12-03','(841) 515-0323','orci.tincidunt@aol.couk'),
-    ('Nerea','Monroe','2016-04-08','(623) 894-2663','in.scelerisque.scelerisque@aol.edu'),
-    ('Harlan','Battle','1992-09-09','(242) 575-5848','ultrices.posuere@icloud.couk'),
-    ('Lilah','Hurley','2001-12-03','1-327-768-1679','erat.vivamus.nisi@icloud.ca'),
-    ('Zephania','Woods','2019-10-10','(552) 247-3571','non@protonmail.ca'),
-    ('Xenos','Howell','2014-07-26','(226) 200-9737','ac.risus@outlook.com'),
-    ('Reece','Conner','2017-05-16','1-407-744-6418','elementum.dui.quis@icloud.com'),
-    ('Portia','Allen','2006-01-10','1-664-336-5124','mi.duis.risus@hotmail.couk'),
-    ('Colorado','Simon','2020-11-04','1-579-682-7923','sed.dictum@hotmail.org'),
-    ('Alan','Moore','2003-11-25','1-361-871-6143','ut.aliquam@protonmail.couk'),
-    ('Nehru','Tucker','2018-04-11','(611) 761-0412','fringilla.donec@outlook.couk'),
-    ('Aladdin','Henry','1999-02-01','(231) 774-0811','tempus.mauris@aol.org'),
-    ('Buffy','Briggs','2015-09-23','(781) 811-5410','elit.dictum@icloud.couk'),
-    ('Quinn','Butler','1999-06-25','1-881-400-3019','donec.fringilla@google.com'),
-    ('Larissa','Goff','2008-11-22','(573) 346-6771','congue.elit@outlook.edu'),
-    ('Idona','Berg','2014-07-10','1-922-724-2342','orci.luctus@icloud.com');
-INSERT INTO users (firstname,lastname,birthday,phone,email)
-VALUES
-    ('Leroy','Ramos','1997-06-28','(621) 215-5816','sagittis.lobortis.mauris@hotmail.org'),
-    ('Inez','Hendricks','1996-09-21','1-469-991-7375','a@google.net'),
-    ('Reagan','Singleton','2023-04-01','(937) 422-1405','libero@icloud.net'),
-    ('Zephr','Boyd','1999-01-08','(971) 357-6226','egestas.lacinia@google.couk'),
-    ('Zia','Atkins','1992-03-23','1-732-978-2228','eu.enim.etiam@aol.org'),
-    ('Nathan','Barron','1998-09-13','1-849-423-4671','non.justo@outlook.org'),
-    ('Violet','Buckley','2013-08-27','(376) 495-0242','suspendisse.commodo.tincidunt@google.couk'),
-    ('Melinda','Keller','2004-11-19','1-244-545-1868','a.tortor@google.com'),
-    ('Brennan','Roman','2013-12-01','(618) 239-0808','neque.sed@hotmail.net'),
-    ('Serena','Marshall','1993-09-13','(286) 656-3337','est.ac.facilisis@yahoo.edu'),
-    ('Patrick','Mckee','2020-07-03','1-561-812-7714','aliquet.odio@google.edu'),
-    ('Jelani','Stuart','2017-11-08','1-327-332-2276','aliquet@yahoo.edu'),
-    ('Demetrius','Frye','2014-03-06','(353) 266-7087','vel.venenatis.vel@yahoo.net'),
-    ('Hammett','Colon','2015-08-02','1-402-671-3443','consectetuer.euismod.est@protonmail.org'),
-    ('Walker','Cole','2020-12-11','(688) 614-1686','volutpat.nulla.facilisis@outlook.org'),
-    ('Unity','Frost','2014-12-24','(370) 716-3168','sed.congue@yahoo.net'),
-    ('Hannah','Boyd','2023-10-04','1-241-777-6387','nec.leo@aol.net'),
-    ('Brandon','Ramirez','1994-11-12','1-264-346-2808','sit@icloud.net'),
-    ('Hope','Gregory','2013-09-21','(320) 723-8263','gravida.molestie.arcu@outlook.edu'),
-    ('Carol','Greene','2021-07-29','1-562-245-3474','ultricies.adipiscing@protonmail.couk');
-INSERT INTO users (firstname,lastname,birthday,phone,email)
-VALUES
-    ('Fitzgerald','Parrish','2008-09-10','(563) 361-3804','ligula.elit@protonmail.com'),
-    ('Reed','Irwin','2018-07-04','1-815-596-6324','a@hotmail.couk'),
-    ('Britanney','Pearson','2007-09-01','1-368-853-5776','nunc@outlook.couk'),
-    ('Brock','Kidd','1996-09-01','(445) 502-4296','pede.nonummy@hotmail.org'),
-    ('Thane','Nixon','2020-09-12','(784) 824-1864','turpis@hotmail.ca'),
-    ('Wendy','William','1996-05-07','(741) 462-0135','adipiscing.elit@protonmail.org'),
-    ('Evelyn','Lane','2010-07-03','1-687-485-9269','velit.eu.sem@icloud.ca'),
-    ('Caesar','Castillo','2002-05-24','(545) 132-5564','ornare.tortor@icloud.org'),
-    ('Jerry','Knight','2011-01-19','(878) 787-6257','ante.ipsum@outlook.org'),
-    ('Logan','Delacruz','2003-06-22','(725) 272-5735','turpis.nulla.aliquet@outlook.com');
+CREATE TABLE Users
+(
+    id        serial primary key,
+    firstname varchar(30) not null,
+    lastname  varchar(30) not null,
+    birthday  date,
+    phone     varchar(15) not null,
+    email     varchar(50) not null,
+    books     varchar
+);
+
+CREATE TABLE Library
+(
+    id     serial primary key,
+    title  varchar(30) not null,
+    author varchar(30) not null
+);
+
+INSERT INTO users (firstname, lastname, birthday, phone, email, books)
+VALUES ('Евгений', 'Поноарев', '2000-03-17', '8-923-705-4446', 'ornare.in@yahoo.net', 'Старик и море, 1984'),
+       ('Игорь', 'Ревякин', '2006-06-18', '8-999-775-4444', 'eu.augue@yahoo.org', 'Фиеста, Скотный двор'),
+       ('Никита', 'Бикаев', '2009-04-21', '8-945-765-1268', 'ipsum.sodales@hotmail.com', 'Шантарам, Скотный двор, 1984'),
+       ('Кристина', 'Куркина', '2011-04-23', '8-999-767-9968', 'mollis.integer.tincidunt@icloud.ca', 'Фиеста'),
+       ('Марина', 'Демидова', '2020-12-03', '8-999-000-7867', 'orci.tincidunt@aol.couk', 'Эссенциализм, Тень горы, Тревожные люди'),
+       ('Алексей', 'Демидов', '2016-04-08', '8-922-222-2121', 'in.scelerisque.scelerisque@aol.edu', 'Крестный отец, Шантарам, 1984, Старик и море'),
+       ('Леонид', 'Крюкин', '1992-09-09', '8-922-122-1212', 'ultrices.posuere@icloud.couk', 'Фиеста, Эссенциализм'),
+       ('Яна', 'Фыркина', '2001-12-03', '8-923-121-4312', 'erat.vivamus.nisi@icloud.ca', 'Вторая жизнь Уве, Скотный двор'),
+       ('Полина', 'Абдюшева', '2019-10-10', '8-923-345-7756', 'non@protonmail.ca', null),
+       ('Виталий', 'Шнайдер', '2019-10-10', '8-932-432-8646', 'non@protonmail.ca', 'Тревожные люди, Скотный двор, Старик и море');
+
+INSERT INTO Library (title, author)
+VALUES ('Старик и море', 'Хумингуэй'),
+       ('Фиеста', 'Хумингуэй'),
+       ('Скотный двор', 'Д. Оруэл'),
+       ('1984', 'Д. Оруэл'),
+       ('Шантарам', 'П.Д. Робертс'),
+       ('Тень горы', 'П.Д. Робертс'),
+       ('Тревожные люди', 'Ф. Бакман'),
+       ('Вторая жизнь Уве', 'Ф. Бакман'),
+       ('Крестный отец', 'М. Пьюзо'),
+       ('Эссенциализм', 'Г. МакКеон');
+

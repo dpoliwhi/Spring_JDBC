@@ -13,7 +13,11 @@ public class SpringJdbcApplication {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(MyConfiguration.class);
         UserDao userDao = context.getBean(UserDao.class);
-        User user5 = userDao.findById(5);
-        System.out.println(user5);
+        User user6 = userDao.findByPhone("8-923-705-4446");
+        User user4 = userDao.findById(4);
+
+        System.out.println(user6);
+        System.out.println(user4);
+
     }
 }
