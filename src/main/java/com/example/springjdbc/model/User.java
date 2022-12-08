@@ -1,21 +1,24 @@
-package service;
+package com.example.springjdbc.model;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.util.Date;
 
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
+@AllArgsConstructor
+@ToString
 @Component
 @Scope("prototype")
 public class User {
     private Integer id;
     private String firstname;
     private String lastname;
-    private String birthday;
+    private Date birthday;
     private String phone;
     private String email;
-    private List<Book> books;
-
+    private String books;
 }
